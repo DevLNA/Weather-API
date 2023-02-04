@@ -14,7 +14,7 @@ export const Header = () => {
               <a className="nav-link" aria-current="page" href="/">Home LNA</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="http://200.131.64.237:8090" target="_blank">OPD Monitor</a>
+              <a className="nav-link" href="http://200.131.64.237:8090/graficos/dashboard" target="_blank">OPD Monitor</a>
             </li> 
             <li className="nav-item">
               <a className="nav-link" href="/docs">API Refs</a>

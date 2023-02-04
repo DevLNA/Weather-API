@@ -43,6 +43,16 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  
+    <script>
+      let button = document.getElementById("btnslider");
+      
+      setInterval(function() {
+          var myImageElement = document.getElementById('goes16');
+          myImageElement.setAttribute('src', 'http://200.131.64.237:8090/img/goes_16.png?rand=' + Math.random());  
+          
+      }, 3000);
+      
+      
+  </script>
   </body>
 </html>
