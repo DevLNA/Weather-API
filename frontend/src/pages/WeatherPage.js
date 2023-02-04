@@ -18,7 +18,9 @@ export const WeatherPage = () => {
     <div className='row'>
         <div className='card text-center'>
             <div className="card-header">
-                <h4>Weather at OPD <span className="badge bg-success">Now</span></h4>
+                <h4>Weather OPD <span className="badge bg-success">
+                {new Date(weather_data.datetime).toUTCString()}
+                </span></h4>
                 
             </div>
             <div className="row justify-content-center">

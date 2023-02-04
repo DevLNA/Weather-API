@@ -6,7 +6,7 @@ import { Search } from "./components/Search";
 import { WeatherPage } from "./pages/WeatherPage";
 import { Documentation } from "./pages/Documentation";
 import { WeatherMaps } from "./components/WeatherMaps";
-
+import { Footer } from "./components/Footer";
 function App() {
   return (
     <Router>      
@@ -19,7 +19,8 @@ function App() {
               <Route path="/weather/:dates" exact element={<><Search/><GraphPage/></>}/>
               <Route path="/docs/" exact element={<><Documentation/></>}/>
             </Routes> 
-          </div>          
+          </div> 
+          <Footer/>       
         </div>             
     </Router>    
   );
