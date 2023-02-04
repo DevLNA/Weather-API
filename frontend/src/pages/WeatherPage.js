@@ -4,15 +4,16 @@ export const WeatherPage = () => {
     // let note = notes.find(note=> note.id === Number(id))
     let [weather_data, setData] = useState([])
 
-    useEffect(()=> {
-        getData()
-    }, [weather_data])
-
-    let getData = async()=> {       
-        let response = await fetch('/api/weather-now/')
-        let data = await response.json()
-        setData(data)
-    }
+    useEffect(() => {
+        async function fetchData() {
+            let response = await fetch('/api/weather-now/')
+            let data = await response.json()
+            setData(data)
+        }
+        fetchData();
+        const interval = setInterval(fetchData, 5000)
+        return () => clearInterval(interval)
+    }, [weather_data]);
 
   return (
     <div className='row'>
