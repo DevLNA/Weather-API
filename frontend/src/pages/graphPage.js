@@ -1,34 +1,40 @@
 import React, {useEffect, useState} from 'react'
 import { useSearchParams } from "react-router-dom";
 import { Plots } from '../components/Plots';
+import { useDispatch, useSelector } from 'react-redux'
+import { listData } from '../actions/dataActions'
+import { Loader } from '../components/Loader'
+import { Message } from '../components/Message'
 
 export const GraphPage = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     let query_element = searchParams.get("query")
     let start_date = searchParams.get("start")
-    let end_date = searchParams.get("end")
+    let end_date = searchParams.get("end")    
 
-    let [graph_data, setData] = useState([])
+    const dispatch = useDispatch()
+    const dataList = useSelector(state => state.dataList)
+    const { error, loading, data } = dataList
 
-    useEffect(()=> {
-        getData()
-    }, [ query_element, start_date, end_date ])
+    useEffect(() => {      
+        dispatch(listData(query_element, start_date, end_date))
+    }, [dispatch])
 
-    let getData = async()=> {       
-        let response = await fetch(`/api/weather/dates/?query=${query_element}&start=${start_date}&end=${end_date}`)
-        let data = await response.json()  
-        setData(data)                      
-    }
 
   return (
     <>
         <div className='card text-center'>
             <div className="card-header">
                 <h2>Weather Data</h2>                
-            </div>                          
-            <div className="card-body">
-                <Plots data={graph_data} elem={query_element}/>
             </div>  
+            {
+                loading ? <Loader/> 
+                : error ? <Message variant='danger'>{error}</Message> 
+                : <div className="card-body">
+                    <Plots data={data} elem={query_element}/>
+                </div> 
+            }                        
+             
         </div>
     </>
   )
