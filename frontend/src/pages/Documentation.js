@@ -14,8 +14,10 @@ export const Documentation = () => {
           </div>
           <div className='card-body'>            
             <h2 id='presentation'>Presentation</h2>
-            <p>The Pico dos DIas Observatory is turning it's weather data more accessible.</p>
+            <p>The Pico dos Dias Observatory is turning it's weather data more accessible.</p>
             <h4 id='updates'>Updates</h4>
+            <h6><span className="badge bg-secondary">01/29/2023</span> Version 1.1</h6>
+            <p>Added Leaf values.</p>
             <h6><span className="badge bg-secondary">01/29/2023</span> Version 1.0</h6>
             <p>This is the first release, containing the data for the main Davis Station located at the top of Perkin-Elmer building.</p>
             <hr></hr>

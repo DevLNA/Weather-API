@@ -12,7 +12,7 @@ export const Search = () => {
     var plot_options = [{label: 'Temperature', value: 'temperature'}, {label: 'Humidity', value: 'humidity'}, 
                     {label: 'Wind Speed', value: 'wind_speed'}, {label: 'Wind Direction', value: 'wind_dir'}, 
                     {label: 'Wind Rose', value: 'wind_rose'},{label: 'Pressure', value: 'bar'},
-                    {label: 'Solar Radiation', value: 'solar_rad'},{label: 'UV Dose', value: 'uv_dose'}]
+                    {label: 'Solar Radiation', value: 'solar_rad'},{label: 'UV Dose', value: 'uv_dose'}, {label: 'Leaf', value: 'leaf'}]
 
     let navigate = useNavigate()
 

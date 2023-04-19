@@ -33,7 +33,7 @@ export const WeatherPage = () => {
                     </div>
                 </div>
                 <div className="col-1-5">
-                    <i className="bi bi-moisture"></i>
+                <i className="bi bi-droplet-half"></i>
                     <div className="card-body">
                         <h5 className="card-title">Humidity</h5>
                         <p className="card-text">{weather_data.humidity} % </p>
@@ -63,15 +63,15 @@ export const WeatherPage = () => {
                 <div className="col-1-5">
                     <i className="bi bi-sun"></i>
                     <div className="card-body">
-                        <h5 className="card-title">Solar Radiation</h5>
-                        <p className="card-text">{weather_data.solar_rad}W/m²</p>
+                        <h5 className="card-title">Solar Radiation | UV</h5>
+                        <p className="card-text">{weather_data.solar_rad}W/m² | {weather_data.uv_dose}</p>
                     </div>
                 </div>
                 <div className="col-1-5">
-                    <i className="bi bi-wind"></i>
+                    <i className="bi bi-moisture"></i>
                     <div className="card-body">
-                        <h5 className="card-title">UV Dose</h5>
-                        <p className="card-text">{weather_data.uv_dose}</p>
+                        <h5 className="card-title">Leaf</h5>
+                        <p className="card-text">{weather_data.leaf}</p>
                     </div>
                 </div>
             </div>
