@@ -42,7 +42,7 @@ export const WeatherMaps = () => {
                     <h5>GOES 16 Image</h5>
                 </div>
                 <div className="card-body">
-                    <img src="http://200.131.64.237:8090/img/goes_16.png" width="100%" height="400" id="goes16"/>
+                    <img src="http://200.131.64.237:8090/img/goes_gif.gif" width="100%" height="400" id="goes16"/>
                 </div>
             </div>    
         </div>
