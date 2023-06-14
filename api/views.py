@@ -7,6 +7,9 @@ from django_pandas.io import read_frame   # Import django_pandas.io read frame
 import plotly.express as px
 import plotly
 from django.http import HttpResponse
+from .simbad import *
+import json
+
 
 # Create your views here.
 @api_view(['GET'])
@@ -73,4 +76,13 @@ def lastWeatherData(request):
     WeatherSerializer.Meta.fields = '__all__'
     serializer = WeatherSerializer(weather, many=False)
     return Response(serializer.data)
+
+@api_view(['GET'])
+def simbadPlot(request, id):
+    arg = id
+    print(arg)
+    response = plot_img(arg)
+    # response = jsonify(response)
+    
+    return HttpResponse(json.dumps(response), content_type="application/json")
 
