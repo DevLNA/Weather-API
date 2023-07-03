@@ -80,7 +80,6 @@ def lastWeatherData(request):
 @api_view(['GET'])
 def simbadPlot(request, id):
     arg = id
-    print(arg)
     response = plot_img(arg)
     # response = jsonify(response)
     

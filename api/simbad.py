@@ -212,7 +212,7 @@ def plot_img(id):
     buffer = BytesIO()
     # fig.savefig('skymap_img.png', bbox_inches='tight', transparent=True, dpi=250)
 
-    fig.savefig(buffer, format='png', bbox_inches='tight', transparent=True, dpi=250)
+    fig.savefig(buffer, format='png', bbox_inches='tight', pad_inches=0, transparent=True, dpi=250)
     buffer.seek(0)
 
     # Convert the buffer to a base64-encoded string
