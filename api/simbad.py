@@ -131,7 +131,7 @@ def get_simbad(id):
         else:
             utcs = ''
         az, elev = get_az_alt(ra, dec, lst, -22.5344)
-        xx, yy = pol2cart(90-elev, az, 133)
+        xx, yy = pol2cart(90-elev, az, 124)
         coord.append((xx, yy, utcs))
     
     return coord
@@ -181,7 +181,7 @@ def get_array_parts(arr):
 
 def plot_img(id):
     # Get allsky from URL (640x480)
-    img = plt.imread(r"C:\Users\teste\Desktop\coopd\public\img\allsky_picole.jpg")
+    img = plt.imread(r"C:\Users\servidorOPD\Documents\Programas\Servidor COOPD\public\img\allsky_picole.jpg")
     fig, ax = plt.subplots(figsize=[6, 6])
     tr = tx.Affine2D().rotate_deg(0)
     ax.imshow(img, extent=[-320, 320, -240, 240])
