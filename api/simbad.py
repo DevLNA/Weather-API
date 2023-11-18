@@ -181,7 +181,7 @@ def get_array_parts(arr):
 
 def plot_img(id):
     # Get allsky from URL (640x480)
-    img = plt.imread(r"C:\Users\servidorOPD\Documents\Programas\Servidor COOPD\public\img\allsky_picole.jpg")
+    img = plt.imread(r"C:\Users\servidorOPD\Documents\Programas\SistemaCOOPD\public\img\allsky_picole.jpg")
     fig, ax = plt.subplots(figsize=[6, 6])
     tr = tx.Affine2D().rotate_deg(0)
     ax.imshow(img, extent=[-320, 320, -240, 240])

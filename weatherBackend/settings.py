@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -141,3 +141,9 @@ STATICFILES_DIRS = [BASE_DIR / 'frontend/build/static']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+# Actual directory user files go to
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# URL used to access the media
+MEDIA_URL = '/media/'
