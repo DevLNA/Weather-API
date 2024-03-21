@@ -14,5 +14,6 @@ class Weather(models.Model):
     uv_dose = models.DecimalField(decimal_places=2, max_digits=5, null=True)
     wind_val = models.CharField(max_length=10, null=True)
     leaf = models.DecimalField(decimal_places=2, max_digits=5, null=True)
+    inside_temperature = models.DecimalField(decimal_places=2, max_digits=5, null=True)
 
 

@@ -32,6 +32,13 @@ export const WeatherPage = () => {
                         <p className="card-text">{weather_data.temperature} °C</p>
                     </div>
                 </div>
+                <div className="col-1-5">                
+                    <i className="bi bi-thermometer-sun"></i>
+                    <div className="card-body">
+                        <h5 className="card-title">Inside Tempeture</h5>
+                        <p className="card-text">{weather_data.inside_temperature} °C</p>
+                    </div>
+                </div>
                 <div className="col-1-5">
                 <i className="bi bi-droplet-half"></i>
                     <div className="card-body">
