@@ -131,7 +131,7 @@ def get_simbad(id):
         else:
             utcs = ''
         az, elev = get_az_alt(ra, dec, lst, -22.5344)
-        xx, yy = pol2cart(90-elev, az, 124)
+        xx, yy = pol2cart(90-elev, az, 91.5)
         coord.append((xx, yy, utcs))
     
     return coord
@@ -165,8 +165,8 @@ def get_az_alt(ra, dec, lst, latitude):
 def pol2cart(rho, phi, allsky_angle):  
     x = rho * np.cos(np.radians(phi+allsky_angle))
     y = rho * np.sin(np.radians(phi+allsky_angle))
-    x0 = 8.5
-    y0 = -5
+    x0 = 9.2
+    y0 = -0.5
     
     x=3.365*x+x0
     y=3.365*y+y0
